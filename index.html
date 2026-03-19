@@ -11,13 +11,13 @@
   <style>
     :root {
       --bg: #ffffff;
-      --text: #1f1f1f;
-      --muted: #666666;
-      --line: #e8e8e8;
-      --accent: #b3122f;
-      --accent-dark: #7f0d21;
-      --section: #fafafa;
-      --max: 1100px;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --light: #f9fafb;
+      --dark: #111827;
+      --max: 1120px;
+      --radius: 18px;
     }
 
     * {
@@ -68,7 +68,7 @@
     .brand {
       font-size: 24px;
       font-weight: 700;
-      color: var(--accent);
+      color: var(--dark);
     }
 
     .nav-links {
@@ -84,116 +84,112 @@
     }
 
     .nav-links a:hover {
-      color: var(--accent);
+      color: #000;
     }
 
     .hero {
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-      color: #fff;
-      padding: 110px 0 90px;
+      padding: 90px 0 70px;
+      border-bottom: 1px solid var(--line);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 50px;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
       align-items: center;
     }
 
     .hero h1 {
-      margin: 0 0 12px;
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 1.03;
+      margin: 0 0 10px;
+      font-size: clamp(40px, 7vw, 64px);
+      line-height: 1.05;
+      color: var(--dark);
     }
 
     .hero-role {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 700;
       margin-bottom: 18px;
-      color: rgba(255,255,255,0.92);
+      color: var(--muted);
     }
 
     .hero p {
-      margin: 0 0 28px;
+      margin: 0 0 18px;
       font-size: 18px;
-      color: rgba(255,255,255,0.9);
       max-width: 700px;
+    }
+
+    .hero-points {
+      margin: 0 0 26px;
+      padding-left: 22px;
+    }
+
+    .hero-points li {
+      margin-bottom: 10px;
+      font-size: 17px;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 24px;
+      margin-top: 24px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 0 20px;
+      min-height: 46px;
+      padding: 0 18px;
       border-radius: 999px;
       font-weight: 700;
+      border: 1px solid var(--dark);
       transition: 0.2s ease;
-      border: 2px solid transparent;
     }
 
-    .btn-primary {
-      background: #fff;
-      color: var(--accent);
+    .btn-dark {
+      background: var(--dark);
+      color: white;
     }
 
-    .btn-primary:hover {
+    .btn-light {
+      background: white;
+      color: var(--dark);
+    }
+
+    .btn:hover {
       transform: translateY(-1px);
     }
 
-    .btn-secondary {
-      color: #fff;
-      border-color: rgba(255,255,255,0.45);
-    }
-
-    .btn-secondary:hover {
-      border-color: rgba(255,255,255,0.8);
-    }
-
-    .hero-contact {
+    .hero-visual {
+      background: var(--light);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      min-height: 420px;
+      padding: 20px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      font-size: 15px;
-      color: rgba(255,255,255,0.86);
-    }
-
-    .hero-photo-wrap {
-      display: flex;
+      align-items: center;
       justify-content: center;
     }
 
-    .hero-photo {
+    .hero-visual img {
       width: 100%;
       max-width: 420px;
-      aspect-ratio: 4 / 5;
+      border-radius: 18px;
       object-fit: cover;
-      border-radius: 24px;
-      border: 8px solid rgba(255,255,255,0.16);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
-      background: rgba(255,255,255,0.1);
     }
 
     .section {
-      padding: 90px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .section.alt {
-      background: var(--section);
+      padding: 82px 0;
+      border-bottom: 1px solid var(--line);
     }
 
     .section-title {
-      margin: 0 0 14px;
-      font-size: 38px;
+      margin: 0 0 12px;
+      font-size: 36px;
       line-height: 1.15;
+      color: var(--dark);
     }
 
     .section-lead {
@@ -203,48 +199,62 @@
       max-width: 820px;
     }
 
-    .content {
-      max-width: 920px;
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 28px;
     }
 
-    .content p {
+    .service-item {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .about-visual {
+      background: var(--light);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 20px;
+    }
+
+    .about-visual img {
+      width: 100%;
+      border-radius: 18px;
+      object-fit: cover;
+    }
+
+    .about-text p {
       margin: 0 0 18px;
       font-size: 18px;
     }
 
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-
-    .list-title {
-      margin: 0 0 14px;
-      font-size: 24px;
-      color: var(--accent);
-    }
-
-    ul.clean {
-      margin: 0;
-      padding-left: 22px;
-    }
-
-    ul.clean li {
-      margin-bottom: 10px;
-      font-size: 17px;
-    }
-
-    .experience-item {
-      padding: 32px 0;
+    .experience-item,
+    .edu-item,
+    .cert-item {
+      padding: 28px 0;
       border-top: 1px solid var(--line);
     }
 
-    .experience-item:first-of-type {
+    .experience-item:first-of-type,
+    .edu-item:first-of-type,
+    .cert-item:first-of-type {
       border-top: none;
       padding-top: 0;
     }
 
-    .exp-top {
+    .exp-head {
       display: flex;
       justify-content: space-between;
       gap: 20px;
@@ -253,8 +263,10 @@
       margin-bottom: 14px;
     }
 
-    .exp-top h3 {
-      margin: 0;
+    .exp-head h3,
+    .edu-item h3,
+    .cert-item h3 {
+      margin: 0 0 6px;
       font-size: 28px;
       line-height: 1.2;
     }
@@ -262,54 +274,50 @@
     .exp-company {
       font-size: 18px;
       font-weight: 700;
-      color: var(--accent);
-      margin-top: 6px;
+      color: var(--muted);
     }
 
     .exp-date {
-      white-space: nowrap;
       font-size: 15px;
       color: var(--muted);
+      white-space: nowrap;
       font-weight: 700;
       padding-top: 6px;
     }
 
-    .exp-body ul {
+    .experience-item ul,
+    .columns ul,
+    .contact-note ul {
       margin: 0;
       padding-left: 22px;
     }
 
-    .exp-body li {
-      margin-bottom: 10px;
+    .experience-item li,
+    .columns li,
+    .edu-item p,
+    .cert-item p,
+    .contact-box p {
       font-size: 17px;
+      color: var(--text);
     }
 
-    .edu-item,
-    .simple-item {
-      padding: 22px 0;
-      border-top: 1px solid var(--line);
+    .experience-item li,
+    .columns li {
+      margin-bottom: 10px;
     }
 
-    .edu-item:first-child,
-    .simple-item:first-child {
-      border-top: none;
-      padding-top: 0;
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 38px;
     }
 
-    .edu-item h3,
-    .simple-item h3 {
-      margin: 0 0 8px;
+    .columns h3 {
+      margin: 0 0 14px;
       font-size: 24px;
     }
 
-    .edu-item p,
-    .simple-item p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .tags {
+    .tag-cloud {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
@@ -321,14 +329,14 @@
       min-height: 40px;
       padding: 0 14px;
       border-radius: 999px;
-      background: #fff;
       border: 1px solid var(--line);
+      background: #fff;
       font-size: 14px;
       font-weight: 700;
     }
 
     .contact-box {
-      max-width: 820px;
+      max-width: 860px;
     }
 
     .contact-box p {
@@ -341,6 +349,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
+      margin-bottom: 22px;
     }
 
     .contact-links a {
@@ -354,32 +363,27 @@
     }
 
     .contact-links a:hover {
-      color: var(--accent);
-      border-color: #d3d3d3;
+      border-color: #cbd5e1;
     }
 
     .legal {
-      margin-top: 24px;
       font-size: 13px;
       color: var(--muted);
     }
 
     footer {
-      border-top: 1px solid var(--line);
       padding: 28px 0 40px;
       color: var(--muted);
       font-size: 14px;
       text-align: center;
     }
 
-    @media (max-width: 960px) {
+    @media (max-width: 980px) {
       .hero-grid,
-      .split {
+      .about-grid,
+      .columns,
+      .services-grid {
         grid-template-columns: 1fr;
-      }
-
-      .hero-photo-wrap {
-        justify-content: flex-start;
       }
     }
 
@@ -390,12 +394,12 @@
         padding: 14px 0;
       }
 
-      .section {
-        padding: 70px 0;
+      .hero {
+        padding: 72px 0 56px;
       }
 
-      .hero {
-        padding: 92px 0 72px;
+      .section {
+        padding: 64px 0;
       }
 
       .section-title {
@@ -403,15 +407,16 @@
       }
 
       .hero-role {
-        font-size: 22px;
+        font-size: 21px;
       }
 
-      .content p,
+      .hero p,
+      .about-text p,
       .section-lead,
-      ul.clean li,
-      .exp-body li,
+      .experience-item li,
+      .columns li,
       .edu-item p,
-      .simple-item p,
+      .cert-item p,
       .contact-box p {
         font-size: 16px;
       }
@@ -424,11 +429,9 @@
     <div class="container nav-inner">
       <a href="https://michalkarakandas.github.io/" class="brand">Michał Karakandas</a>
       <div class="nav-links">
+        <a href="#uslugi">Obszary</a>
         <a href="#o-mnie">O mnie</a>
         <a href="#doswiadczenie">Doświadczenie</a>
-        <a href="#umiejetnosci">Umiejętności</a>
-        <a href="#wyksztalcenie">Wykształcenie</a>
-        <a href="#certyfikaty">Certyfikaty</a>
         <a href="#kontakt">Kontakt</a>
       </div>
     </div>
@@ -440,357 +443,379 @@
         <h1>Michał Karakandas</h1>
         <div class="hero-role">Performance Marketing Manager</div>
         <p>
-          Jestem doświadczonym marketingowcem. W pracy konsultanta pomogłem ponad tysiąc
-          dwustu firmom oraz instytucjom, a w roli freelancera współpracowałem w ponad
-          pięćdziesięciu projektach. Łączę performance marketing, SEO, analitykę i branding,
-          pracując zarówno strategicznie, jak i operacyjnie.
+          Pomagam firmom rozwijać marketing internetowy mądrze, prosto i skutecznie.
+          Łączę performance marketing, SEO, analitykę i branding, pracując zarówno
+          strategicznie, jak i operacyjnie.
+        </p>
+
+        <ul class="hero-points">
+          <li>W pracy konsultanta pomogłem ponad 1200 firmom oraz instytucjom.</li>
+          <li>Jako freelancer współpracowałem w ponad 50 projektach.</li>
+          <li>Pracuję data-driven i stawiam na przejrzyste działania bez chaosu.</li>
+          <li>Łączę szerokie spojrzenie na marketing z mocnym naciskiem na jakość kampanii.</li>
+        </ul>
+
+        <p>
+          Jeśli chcesz uporządkować reklamę online albo rozwinąć działania krok po kroku —
+          tutaj znajdziesz moje doświadczenie, kompetencje i sposób pracy.
         </p>
 
         <div class="hero-actions">
-          <a href="#kontakt" class="btn btn-primary">Kontakt</a>
-          <a href="#doswiadczenie" class="btn btn-secondary">Doświadczenie</a>
-        </div>
-
-        <div class="hero-contact">
-          <span>tel. 695 611 182</span>
-          <span>michal@karakandas.pl</span>
-          <span>digital marketing ekspert</span>
+          <a href="#kontakt" class="btn btn-dark">Kontakt</a>
+          <a href="#doswiadczenie" class="btn btn-light">Doświadczenie</a>
         </div>
       </div>
 
-      <div class="hero-photo-wrap">
-        <img
-          class="hero-photo"
-          src="profile.jpg"
-          alt="Michał Karakandas"
-        />
+      <div class="hero-visual">
+        <img src="profile.jpg" alt="Michał Karakandas" />
       </div>
     </div>
   </header>
 
-  <section class="section" id="o-mnie">
+  <section class="section" id="uslugi">
     <div class="container">
-      <div class="content">
-        <h2 class="section-title">O mnie</h2>
-        <p class="section-lead">
-          Cechuje mnie przyjazne i pomocne usposobienie, a atmosfera współpracy jest dla mnie
-          bardzo istotna. Moją ambicją zawodową jest rozwój osobisty oraz skalowanie moich
-          umiejętności w organizacji. Lubię rozwiązania out of the box, lecz jestem data driven.
-          Pasjonuje mnie branding i wiem, dlaczego jabłko jest nadgryzione.
-        </p>
+      <h2 class="section-title">Obszary</h2>
+      <p class="section-lead">
+        Na co dzień pracuję w tych obszarach marketingu internetowego.
+      </p>
 
-        <p>
-          Moje podejście oparte na zasadzie T-shape pozwala mi łączyć wiedzę z obszaru digital
-          z szerokim zrozumieniem marketingu i biznesu, co umożliwia mi skuteczne współpracowanie
-          z zespołami o różnorodnych umiejętnościach.
-        </p>
+      <div class="services-grid">
+        <div class="service-item">Google Ads</div>
+        <div class="service-item">Meta Ads</div>
+        <div class="service-item">TikTok Ads</div>
+        <div class="service-item">Microsoft Advertising</div>
+        <div class="service-item">X Ads</div>
+        <div class="service-item">Lokalne SEO</div>
+        <div class="service-item">Analityka</div>
+        <div class="service-item">Kampanie SMS</div>
+        <div class="service-item">Branding i rozwój marki</div>
       </div>
     </div>
   </section>
 
-  <section class="section alt" id="doswiadczenie">
+  <section class="section" id="o-mnie">
     <div class="container">
-      <div class="content">
-        <h2 class="section-title">Doświadczenie zawodowe</h2>
-        <p class="section-lead">
-          Kampanie PPC, SEO, analityka, marketing automation, rozwój marki i konsulting.
-        </p>
+      <h2 class="section-title">O mnie</h2>
+      <div class="about-grid">
+        <div class="about-visual">
+          <img src="about.jpg" alt="Michał Karakandas - ilustracja lub zdjęcie" />
+        </div>
 
-        <article class="experience-item">
-          <div class="exp-top">
-            <div>
-              <h3>Performance Marketing Manager</h3>
-              <div class="exp-company">Pixel Arcadium sp. z o.o. (Pixel XL)</div>
-            </div>
-            <div class="exp-date">luty 2025 - obecnie</div>
-          </div>
-          <div class="exp-body">
-            <ul>
-              <li>Prowadzenie kampanii performance i PPC w wielu kanałach reklamowych.</li>
-              <li>Obsługa i rozwój kampanii Google Ads, Meta Ads, TikTok Ads, X Ads oraz Microsoft Advertising.</li>
-              <li>Planowanie i realizacja kampanii SMS.</li>
-              <li>Prowadzenie działań SEO i lokalnego SEO.</li>
-              <li>Wsparcie wizerunku, rozwoju marki i obecności firmy w digitalu.</li>
-            </ul>
-          </div>
-        </article>
+        <div class="about-text">
+          <p>
+            Cześć, jestem Michał i od lat zajmuję się marketingiem internetowym.
+            Jestem doświadczonym ekspertem z podejściem T-shaped — mam szerokie
+            spojrzenie na promocję online, a jednocześnie mocno skupiam się na
+            kampaniach, ich jakości i realnym wpływie na rozwój biznesu.
+          </p>
 
-        <article class="experience-item">
-          <div class="exp-top">
-            <div>
-              <h3>Digital Marketing Manager</h3>
-              <div class="exp-company">TabelaOfert.pl sp. z o.o.</div>
-            </div>
-            <div class="exp-date">czerwiec 2024 - luty 2025</div>
-          </div>
-          <div class="exp-body">
-            <ul>
-              <li>Kampanie Google Ads i Meta Ads.</li>
-              <li>Kampanie SMS oraz e-mail marketing.</li>
-              <li>SEO i publishing.</li>
-              <li>Data analysis i raportowanie.</li>
-              <li>Zarządzanie zespołem.</li>
-            </ul>
-          </div>
-        </article>
+          <p>
+            Pracowałem zarówno z małymi i średnimi firmami, jak i z dużymi
+            korporacjami oraz klastrami technologicznymi. Dzięki temu potrafię
+            dopasować sposób działania do skali, możliwości i etapu rozwoju firmy
+            — bez szablonów i bez zbędnego komplikowania.
+          </p>
 
-        <article class="experience-item">
-          <div class="exp-top">
-            <div>
-              <h3>Freelance / własna działalność gospodarcza</h3>
-              <div class="exp-company">projekty dla różnych marek i organizacji</div>
-            </div>
-            <div class="exp-date">2016 - obecnie</div>
-          </div>
-          <div class="exp-body">
-            <ul>
-              <li>Kampanie Google Ads, Meta Ads, Twitter Ads / X Ads, Microsoft Ads.</li>
-              <li>Lokalne SEO.</li>
-              <li>Audyty PPC i SEO.</li>
-            </ul>
-          </div>
-        </article>
+          <p>
+            Cechuje mnie przyjazne i pomocne usposobienie, a atmosfera współpracy
+            jest dla mnie bardzo istotna. Moją ambicją zawodową jest rozwój
+            osobisty oraz skalowanie moich umiejętności w organizacji. Lubię
+            rozwiązania out of the box, lecz jestem data-driven. Pasjonuje mnie
+            branding i wiem, dlaczego jabłko jest nadgryzione.
+          </p>
 
-        <article class="experience-item">
-          <div class="exp-top">
-            <div>
-              <h3>Ekspert marketingu internetowego</h3>
-              <div class="exp-company">Audiofon Matyja sp. k.</div>
-            </div>
-            <div class="exp-date">sierpień 2020 - maj 2024</div>
-          </div>
-          <div class="exp-body">
-            <ul>
-              <li>Prowadzenie kampanii PPC.</li>
-              <li>Pozycjonowanie strony w wyszukiwarce oraz pozycjonowanie wizytówek Google.</li>
-              <li>Administracja strony www i publishing.</li>
-              <li>Wsparcie community managera w prowadzeniu profili społecznościowych.</li>
-              <li>Opieka nad newsletterem oraz marketing automation.</li>
-              <li>Kontakt z agencjami zewnętrznymi, zarządzanie oraz ewaluacja wyników.</li>
-              <li>Geomarketing i data analysis.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="experience-item">
-          <div class="exp-top">
-            <div>
-              <h3>Konsultant ds. marketingu internetowego</h3>
-              <div class="exp-company">Mediacap sp. z o.o.</div>
-            </div>
-            <div class="exp-date">marzec 2017 - marzec 2022</div>
-          </div>
-          <div class="exp-body">
-            <ul>
-              <li>Projekty Google Internetowe Rewolucje, Google dla Edukacji i Firmy Jutra.</li>
-              <li>Ewangelizacja, konsulting i doradztwo w dziedzinie marketingu internetowego i obecności firmy w internecie.</li>
-              <li>Wsparcie w obszarach SEM (SEO/SEA), kampanii PPC, kampanii e-mail i video.</li>
-              <li>Doradztwo w zakresie obecności w social mediach.</li>
-              <li>Analiza ruchu na stronie www.</li>
-              <li>Wsparcie rozwoju na rynkach zagranicznych.</li>
-              <li>Doradztwo w obszarze ePR-u, standardów UX i UI oraz analizy jakości stron internetowych.</li>
-              <li>Doradztwo w zakresie bezpieczeństwa użytkowników.</li>
-              <li>Wykorzystanie narzędzi marketingu internetowego i narzędzi Google.</li>
-              <li>Tworzenie digital planów i audytów.</li>
-              <li>Działania ambasadorskie: partnerzy projektu, leady, warsztaty, szkolenia i prezentacje.</li>
-              <li>Google Trusted Verifier: weryfikacja obecności firm na mapach.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="experience-item">
-          <div class="exp-top">
-            <div>
-              <h3>Poprzednie doświadczenie</h3>
-              <div class="exp-company">różne projekty i organizacje</div>
-            </div>
-          </div>
-          <div class="exp-body">
-            <ul>
-              <li>Specjalista ds. marketingu - Fundacja Centaurs.</li>
-              <li>Specjalista ds. marketingu automatycznego / Redaktor - Q4B / TelematicWorld.</li>
-              <li>Asystent kierownika produkcji - Tako Media.</li>
-              <li>Asystent ds. kontroli jakości procesów sprzedażowych - C.C.I.G.</li>
-            </ul>
-          </div>
-        </article>
+          <p>
+            Jestem absolwentem Uniwersytetu Wrocławskiego. W swojej pracy stawiam
+            na jasne zasady, prosty język i decyzje oparte na danych. Klienci
+            doceniają mnie za partnerskie podejście, łatwy kontakt i brak
+            marketingowego żargonu.
+          </p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section" id="doswiadczenie">
+    <div class="container">
+      <h2 class="section-title">Doświadczenie</h2>
+      <p class="section-lead">
+        Kampanie PPC, SEO, analityka, marketing automation, rozwój marki i konsulting.
+      </p>
+
+      <article class="experience-item">
+        <div class="exp-head">
+          <div>
+            <h3>Performance Marketing Manager</h3>
+            <div class="exp-company">Pixel Arcadium sp. z o.o. (Pixel XL)</div>
+          </div>
+          <div class="exp-date">luty 2025 - obecnie</div>
+        </div>
+        <ul>
+          <li>Prowadzenie kampanii performance i PPC w wielu kanałach reklamowych.</li>
+          <li>Obsługa i rozwój kampanii Google Ads, Meta Ads, TikTok Ads, X Ads oraz Microsoft Advertising.</li>
+          <li>Planowanie i realizacja kampanii SMS.</li>
+          <li>Prowadzenie działań SEO i lokalnego SEO.</li>
+          <li>Wsparcie wizerunku, rozwoju marki i obecności firmy w digitalu.</li>
+        </ul>
+      </article>
+
+      <article class="experience-item">
+        <div class="exp-head">
+          <div>
+            <h3>Digital Marketing Manager</h3>
+            <div class="exp-company">TabelaOfert.pl sp. z o.o.</div>
+          </div>
+          <div class="exp-date">czerwiec 2024 - luty 2025</div>
+        </div>
+        <ul>
+          <li>Kampanie Google Ads i Meta Ads.</li>
+          <li>Kampanie SMS oraz e-mail marketing.</li>
+          <li>SEO i publishing.</li>
+          <li>Data analysis i raportowanie.</li>
+          <li>Zarządzanie zespołem.</li>
+        </ul>
+      </article>
+
+      <article class="experience-item">
+        <div class="exp-head">
+          <div>
+            <h3>Freelance / własna działalność gospodarcza</h3>
+            <div class="exp-company">projekty dla różnych marek i organizacji</div>
+          </div>
+          <div class="exp-date">2016 - obecnie</div>
+        </div>
+        <ul>
+          <li>Kampanie Google Ads, Meta Ads, Twitter Ads / X Ads, Microsoft Ads.</li>
+          <li>Lokalne SEO.</li>
+          <li>Audyty PPC i SEO.</li>
+        </ul>
+      </article>
+
+      <article class="experience-item">
+        <div class="exp-head">
+          <div>
+            <h3>Ekspert marketingu internetowego</h3>
+            <div class="exp-company">Audiofon Matyja sp. k.</div>
+          </div>
+          <div class="exp-date">sierpień 2020 - maj 2024</div>
+        </div>
+        <ul>
+          <li>Prowadzenie kampanii PPC.</li>
+          <li>Pozycjonowanie strony w wyszukiwarce oraz pozycjonowanie wizytówek Google.</li>
+          <li>Administracja strony www i publishing.</li>
+          <li>Wsparcie community managera w prowadzeniu profili społecznościowych.</li>
+          <li>Opieka nad newsletterem oraz marketing automation.</li>
+          <li>Kontakt z agencjami zewnętrznymi, zarządzanie oraz ewaluacja wyników.</li>
+          <li>Geomarketing i data analysis.</li>
+        </ul>
+      </article>
+
+      <article class="experience-item">
+        <div class="exp-head">
+          <div>
+            <h3>Konsultant ds. marketingu internetowego</h3>
+            <div class="exp-company">Mediacap sp. z o.o.</div>
+          </div>
+          <div class="exp-date">marzec 2017 - marzec 2022</div>
+        </div>
+        <ul>
+          <li>Projekty Google Internetowe Rewolucje, Google dla Edukacji i Firmy Jutra.</li>
+          <li>Ewangelizacja, konsulting i doradztwo w dziedzinie marketingu internetowego i obecności firmy w internecie.</li>
+          <li>Wsparcie w obszarach SEM (SEO/SEA), kampanii PPC, kampanii e-mail i video.</li>
+          <li>Doradztwo w zakresie obecności w social mediach.</li>
+          <li>Analiza ruchu na stronach WWW.</li>
+          <li>Wsparcie rozwoju na rynkach zagranicznych.</li>
+          <li>Doradztwo w obszarze ePR-u, standardów UX i UI oraz analizy jakości stron internetowych.</li>
+          <li>Doradztwo w zakresie bezpieczeństwa użytkowników.</li>
+          <li>Wykorzystanie narzędzi marketingu internetowego i narzędzi Google.</li>
+          <li>Tworzenie digital planów i audytów.</li>
+          <li>Działania ambasadorskie: partnerzy projektu, leady, warsztaty, szkolenia i prezentacje.</li>
+          <li>Google Trusted Verifier - weryfikacja obecności firm na mapach.</li>
+        </ul>
+      </article>
+
+      <article class="experience-item">
+        <div class="exp-head">
+          <div>
+            <h3>Poprzednie doświadczenie</h3>
+            <div class="exp-company">różne projekty i organizacje</div>
+          </div>
+        </div>
+        <ul>
+          <li>Specjalista ds. marketingu - Fundacja Centaurs.</li>
+          <li>Specjalista ds. marketingu automatycznego / Redaktor - Q4B / TelematicWorld.</li>
+          <li>Asystent kierownika produkcji - Tako Media.</li>
+          <li>Asystent ds. kontroli jakości procesów sprzedażowych - C.C.I.G.</li>
+        </ul>
+      </article>
     </div>
   </section>
 
   <section class="section" id="umiejetnosci">
     <div class="container">
-      <div class="content">
-        <h2 class="section-title">Umiejętności i narzędzia</h2>
-        <p class="section-lead">
-          Performance marketing, SEO, analityka, branding i narzędzia digitalowe.
-        </p>
+      <h2 class="section-title">Umiejętności</h2>
+      <p class="section-lead">
+        Narzędzia, kanały i kompetencje, z których korzystam w codziennej pracy.
+      </p>
 
-        <div class="split">
-          <div>
-            <h3 class="list-title">Kanały i obszary</h3>
-            <ul class="clean">
-              <li>Google Ads</li>
-              <li>Meta Ads</li>
-              <li>TikTok Ads</li>
-              <li>Twitter Ads / X Ads</li>
-              <li>Microsoft Ads</li>
-              <li>SEO</li>
-              <li>Local SEO</li>
-              <li>kampanie SMS</li>
-              <li>e-mail marketing</li>
-              <li>publishing</li>
-              <li>marketing automation</li>
-              <li>branding</li>
-              <li>data analysis</li>
-              <li>geomarketing</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="list-title">Narzędzia</h3>
-            <div class="tags">
-              <span class="tag">Google Ads</span>
-              <span class="tag">Google Analytics</span>
-              <span class="tag">Search Console</span>
-              <span class="tag">Profil Firmy Google</span>
-              <span class="tag">Tag Manager</span>
-              <span class="tag">Looker Studio</span>
-              <span class="tag">Meta Business Manager</span>
-              <span class="tag">Screaming Frog</span>
-              <span class="tag">SimilarWeb</span>
-              <span class="tag">SoTrender</span>
-              <span class="tag">Answer The Public</span>
-              <span class="tag">Ubersuggest</span>
-              <span class="tag">Ahrefs</span>
-              <span class="tag">Majestic</span>
-              <span class="tag">Semstorm</span>
-              <span class="tag">Senuto</span>
-              <span class="tag">Hotjar</span>
-              <span class="tag">MS Clarity</span>
-              <span class="tag">WordPress</span>
-              <span class="tag">WebWave</span>
-              <span class="tag">Wix</span>
-              <span class="tag">Brand24</span>
-              <span class="tag">SentiOne</span>
-              <span class="tag">Pin Me To</span>
-              <span class="tag">Rating Captain</span>
-              <span class="tag">Adobe CC</span>
-              <span class="tag">Canva</span>
-              <span class="tag">Office 360</span>
-              <span class="tag">Piwik Pro</span>
-              <span class="tag">Freshmail</span>
-              <span class="tag">GetResponse</span>
-              <span class="tag">Salesmanago</span>
-              <span class="tag">Zoho CRM</span>
-              <span class="tag">Zoho Mail</span>
-              <span class="tag">SMS API</span>
-              <span class="tag">ChatGPT</span>
-              <span class="tag">Google Gemini</span>
-              <span class="tag">DALL-E</span>
-            </div>
-          </div>
+      <div class="columns">
+        <div>
+          <h3>Kanały i obszary</h3>
+          <ul>
+            <li>Google Ads</li>
+            <li>Meta Ads</li>
+            <li>TikTok Ads</li>
+            <li>Twitter Ads / X Ads</li>
+            <li>Microsoft Ads</li>
+            <li>SEO</li>
+            <li>Local SEO</li>
+            <li>kampanie SMS</li>
+            <li>e-mail marketing</li>
+            <li>publishing</li>
+            <li>marketing automation</li>
+            <li>branding</li>
+            <li>data analysis</li>
+            <li>geomarketing</li>
+          </ul>
         </div>
 
-        <div class="split" style="margin-top: 40px;">
-          <div>
-            <h3 class="list-title">Umiejętności miękkie</h3>
-            <ul class="clean">
-              <li>kreatywność</li>
-              <li>wysokie poczucie estetyki</li>
-              <li>rozwinięte umiejętności interpersonalne</li>
-              <li>umiejętność pracy w grupie</li>
-              <li>zarządzanie zasobami ludzkimi</li>
-              <li>dobra organizacja pracy</li>
-              <li>dynamizm działania</li>
-              <li>miłe usposobienie</li>
-              <li>poczucie humoru</li>
-            </ul>
+        <div>
+          <h3>Narzędzia</h3>
+          <div class="tag-cloud">
+            <span class="tag">Google Ads</span>
+            <span class="tag">Google Analytics</span>
+            <span class="tag">Search Console</span>
+            <span class="tag">Profil Firmy Google</span>
+            <span class="tag">Tag Manager</span>
+            <span class="tag">Looker Studio</span>
+            <span class="tag">Meta Business Manager</span>
+            <span class="tag">Screaming Frog</span>
+            <span class="tag">SimilarWeb</span>
+            <span class="tag">SoTrender</span>
+            <span class="tag">Answer The Public</span>
+            <span class="tag">Ubersuggest</span>
+            <span class="tag">Ahrefs</span>
+            <span class="tag">Majestic</span>
+            <span class="tag">Semstorm</span>
+            <span class="tag">Senuto</span>
+            <span class="tag">Hotjar</span>
+            <span class="tag">MS Clarity</span>
+            <span class="tag">WordPress</span>
+            <span class="tag">WebWave</span>
+            <span class="tag">Wix</span>
+            <span class="tag">Brand24</span>
+            <span class="tag">SentiOne</span>
+            <span class="tag">Pin Me To</span>
+            <span class="tag">Rating Captain</span>
+            <span class="tag">Adobe CC</span>
+            <span class="tag">Canva</span>
+            <span class="tag">Office 360</span>
+            <span class="tag">Piwik Pro</span>
+            <span class="tag">Freshmail</span>
+            <span class="tag">GetResponse</span>
+            <span class="tag">Salesmanago</span>
+            <span class="tag">Zoho CRM</span>
+            <span class="tag">Zoho Mail</span>
+            <span class="tag">SMS API</span>
+            <span class="tag">ChatGPT</span>
+            <span class="tag">Google Gemini</span>
+            <span class="tag">DALL-E</span>
           </div>
+        </div>
+      </div>
 
-          <div>
-            <h3 class="list-title">Języki i zainteresowania</h3>
-            <ul class="clean">
-              <li>język angielski</li>
-              <li>język śląski</li>
-              <li>marketing</li>
-              <li>PR</li>
-              <li>branding</li>
-              <li>social media</li>
-              <li>nowe technologie</li>
-              <li>reklama lat 90-tych</li>
-              <li>memy internetowe</li>
-              <li>film / kino / popkultura</li>
-              <li>nurkowanie</li>
-            </ul>
-          </div>
+      <div class="columns" style="margin-top: 38px;">
+        <div>
+          <h3>Umiejętności miękkie</h3>
+          <ul>
+            <li>kreatywność</li>
+            <li>wysokie poczucie estetyki</li>
+            <li>rozwinięte umiejętności interpersonalne</li>
+            <li>umiejętność pracy w grupie</li>
+            <li>zarządzanie zasobami ludzkimi</li>
+            <li>dobra organizacja pracy</li>
+            <li>dynamizm działania</li>
+            <li>miłe usposobienie</li>
+            <li>poczucie humoru</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Języki i zainteresowania</h3>
+          <ul>
+            <li>język angielski</li>
+            <li>język śląski</li>
+            <li>marketing</li>
+            <li>PR</li>
+            <li>branding</li>
+            <li>social media</li>
+            <li>nowe technologie</li>
+            <li>reklama lat 90-tych</li>
+            <li>memy internetowe</li>
+            <li>film / kino / popkultura</li>
+            <li>nurkowanie</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section alt" id="wyksztalcenie">
+  <section class="section" id="wyksztalcenie">
     <div class="container">
-      <div class="content">
-        <h2 class="section-title">Wykształcenie</h2>
-        <p class="section-lead">
-          Uniwersytet Wrocławski i kierunki związane z komunikacją oraz naukami społecznymi.
-        </p>
+      <h2 class="section-title">Wykształcenie</h2>
+      <p class="section-lead">
+        Uniwersytet Wrocławski i kierunki związane z komunikacją oraz naukami społecznymi.
+      </p>
 
-        <div class="edu-item">
-          <h3>Komunikacja wizerunkowa</h3>
-          <p>II stopień - stacjonarne 2014-2016 / Uniwersytet Wrocławski</p>
-        </div>
+      <div class="edu-item">
+        <h3>Komunikacja wizerunkowa</h3>
+        <p>II stopień - studia stacjonarne, 2014-2016 / Uniwersytet Wrocławski</p>
+      </div>
 
-        <div class="edu-item">
-          <h3>Komunikacja wizerunkowa</h3>
-          <p>I stopień - stacjonarne 2013-2016 / Uniwersytet Wrocławski</p>
-        </div>
+      <div class="edu-item">
+        <h3>Komunikacja wizerunkowa</h3>
+        <p>I stopień - studia stacjonarne, 2013-2016 / Uniwersytet Wrocławski</p>
+      </div>
 
-        <div class="edu-item">
-          <h3>Politologia</h3>
-          <p>I stopień - stacjonarne 2010-2013 / Uniwersytet Wrocławski</p>
-        </div>
+      <div class="edu-item">
+        <h3>Politologia</h3>
+        <p>I stopień - studia stacjonarne, 2010-2013 / Uniwersytet Wrocławski</p>
       </div>
     </div>
   </section>
 
   <section class="section" id="certyfikaty">
     <div class="container">
-      <div class="content">
-        <h2 class="section-title">Certyfikaty i szkolenia</h2>
-        <p class="section-lead">
-          Certyfikaty i programy rozwojowe z obszaru Google, reklamy i monitoringu internetu.
+      <h2 class="section-title">Certyfikaty i szkolenia</h2>
+      <p class="section-lead">
+        Programy rozwojowe z obszaru Google, reklamy i monitoringu internetu.
+      </p>
+
+      <div class="cert-item">
+        <h3>Google</h3>
+        <p>
+          Google Internetowe Rewolucje, Google Ads Search, Google Ads Display,
+          Google Ads Mobile, Google Ads Video, Google Shopping Ads,
+          Google Creative Skills for Innovation, Google Workshop.
         </p>
+      </div>
 
-        <div class="simple-item">
-          <h3>Google</h3>
-          <p>
-            Google Internetowe Rewolucje, Google Ads Search, Google Ads Display,
-            Google Ads Mobile, Google Ads Video, Google Shopping Ads,
-            Google Creative Skills for Innovation, Google Workshop.
-          </p>
-        </div>
-
-        <div class="simple-item">
-          <h3>Dodatkowe</h3>
-          <p>
-            Brand24 - Monitorowanie internetu, SMS API,
-            praktyczne wykorzystanie narzędzi marketingu internetowego,
-            praktyczne wykorzystanie narzędzi Google.
-          </p>
-        </div>
+      <div class="cert-item">
+        <h3>Dodatkowe</h3>
+        <p>
+          Brand24 - Monitorowanie internetu, SMS API, praktyczne wykorzystanie
+          narzędzi marketingu internetowego, praktyczne wykorzystanie narzędzi Google.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="section alt" id="kontakt">
+  <section class="section" id="kontakt">
     <div class="container">
       <div class="contact-box">
         <h2 class="section-title">Kontakt</h2>
-        <p class="section-lead" style="margin-bottom: 22px;">
-          Jestem otwarty na rozmowę o współpracy, działaniach performance,
-          SEO, consultingu i rozwoju marki.
+        <p class="section-lead">
+          Napisz krótko, czego potrzebujesz — wrócę z propozycją kolejnych kroków.
         </p>
 
         <div class="contact-links">
@@ -801,15 +826,15 @@
         </div>
 
         <div class="legal">
-          Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do
-          realizacji procesu rekrutacji zgodnie z obowiązującymi przepisami prawa.
+          Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych
+          do realizacji procesu rekrutacji zgodnie z obowiązującymi przepisami prawa.
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    © 2026 Michał Karakandas
+    © 2026 Michał Karakandas — CV online
   </footer>
 
 </body>
