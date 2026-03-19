@@ -3,28 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Michał Karakandas | Performance Marketing Manager</title>
+  <title>Michał Karakandas | CV</title>
   <meta
     name="description"
-    content="Michał Karakandas - Performance Marketing Manager. Google Ads, Meta Ads, TikTok Ads, X Ads, Microsoft Advertising, SEO, analityka, branding i rozwój marki."
+    content="Michał Karakandas - Performance Marketing Manager. CV online, doświadczenie, umiejętności, wykształcenie i kontakt."
   />
   <style>
-    :root {
-      --bg: #0f172a;
-      --bg-2: #1e293b;
-      --light: #f8fafc;
-      --white: #ffffff;
-      --text: #1f2937;
-      --muted: #64748b;
-      --line: #e2e8f0;
-      --accent: #2563eb;
-      --accent-2: #dbeafe;
-      --card: #ffffff;
-      --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-      --radius: 22px;
-      --max: 1160px;
-    }
-
     * {
       box-sizing: border-box;
       scroll-behavior: smooth;
@@ -33,69 +17,41 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--light);
-      color: var(--text);
-      line-height: 1.65;
+      color: #222;
+      background: #f5f7fa;
+      line-height: 1.7;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
     .container {
-      width: min(100% - 32px, var(--max));
+      width: min(1100px, calc(100% - 32px));
       margin: 0 auto;
     }
 
-    .section {
-      padding: 90px 0;
-    }
-
-    .section-title {
-      font-size: 36px;
-      line-height: 1.15;
-      margin: 0 0 14px;
-      text-align: center;
-    }
-
-    .section-lead {
-      max-width: 820px;
-      margin: 0 auto 48px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid rgba(148, 163, 184, 0.16);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .nav {
+    .navbar {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
       position: sticky;
       top: 0;
-      z-index: 999;
-      background: rgba(15, 23, 42, 0.94);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      z-index: 1000;
     }
 
-    .nav-inner {
-      min-height: 78px;
+    .navbar .container {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      align-items: center;
+      min-height: 72px;
+      gap: 20px;
     }
 
-    .brand {
-      color: var(--white);
-      font-size: 22px;
+    .logo {
+      font-size: 24px;
       font-weight: 700;
-      letter-spacing: 0.5px;
+      color: #111827;
     }
 
     .nav-links {
@@ -105,81 +61,65 @@
     }
 
     .nav-links a {
-      color: rgba(255,255,255,0.88);
       font-size: 15px;
       font-weight: 700;
+      color: #374151;
     }
 
     .nav-links a:hover {
-      color: var(--white);
+      color: #111827;
     }
 
     .hero {
-      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-2) 100%);
-      color: var(--white);
-      padding: 110px 0 92px;
+      background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+      color: #fff;
+      padding: 90px 0 80px;
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
-      gap: 42px;
+      gap: 40px;
       align-items: center;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.1);
-      color: var(--accent-2);
-      font-weight: 700;
-      font-size: 14px;
-      margin-bottom: 18px;
     }
 
     .hero h1 {
       margin: 0 0 12px;
-      font-size: clamp(42px, 7vw, 68px);
-      line-height: 1.02;
+      font-size: clamp(40px, 6vw, 58px);
+      line-height: 1.05;
     }
 
-    .hero-role {
-      font-size: 25px;
+    .hero h2 {
+      margin: 0 0 20px;
+      font-size: 24px;
+      color: #c7d2fe;
       font-weight: 700;
-      color: #bfdbfe;
-      margin-bottom: 18px;
     }
 
     .hero p {
       margin: 0 0 28px;
       font-size: 18px;
-      color: rgba(255,255,255,0.86);
-      max-width: 760px;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 700px;
     }
 
-    .hero-actions {
+    .hero-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 28px;
     }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 22px;
-      border-radius: 999px;
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 10px;
       font-weight: 700;
       transition: 0.2s ease;
-      border: 2px solid transparent;
     }
 
     .btn-primary {
-      background: var(--accent);
-      color: var(--white);
+      background: #2563eb;
+      color: #fff;
     }
 
     .btn-primary:hover {
@@ -187,120 +127,69 @@
     }
 
     .btn-secondary {
-      border-color: rgba(255,255,255,0.25);
-      color: var(--white);
       background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     .btn-secondary:hover {
-      border-color: rgba(255,255,255,0.5);
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .meta-pill {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      color: rgba(255,255,255,0.9);
-      font-size: 14px;
-      font-weight: 700;
+      border-color: rgba(255, 255, 255, 0.6);
     }
 
     .hero-card {
-      padding: 30px;
-      border-radius: 28px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 28px;
     }
 
     .hero-card h3 {
-      margin: 0 0 18px;
-      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 22px;
     }
 
-    .hero-list {
-      display: grid;
-      gap: 14px;
+    .hero-card ul {
+      margin: 0;
+      padding-left: 20px;
+      color: rgba(255, 255, 255, 0.88);
     }
 
-    .hero-item {
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.08);
+    .hero-card li + li {
+      margin-top: 10px;
     }
 
-    .hero-item strong {
-      display: block;
-      color: #dbeafe;
-      margin-bottom: 4px;
-      font-size: 15px;
+    section {
+      padding: 75px 0;
     }
 
-    .hero-item span {
-      color: rgba(255,255,255,0.85);
-      font-size: 15px;
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      margin: 0 0 14px;
+      color: #111827;
     }
 
-    .about-grid,
-    .edu-grid,
-    .contact-grid {
+    .section-subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: #6b7280;
+      max-width: 760px;
+      margin: 0 auto 45px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
+      border: 1px solid #e5e7eb;
+    }
+
+    .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 26px;
-    }
-
-    .about-card,
-    .edu-card,
-    .contact-card {
-      padding: 30px;
-    }
-
-    .about-card h3,
-    .edu-card h3,
-    .contact-card h3 {
-      margin: 0 0 14px;
-      font-size: 24px;
-    }
-
-    .about-card p,
-    .edu-card p,
-    .contact-card p,
-    .contact-card li {
-      margin: 0;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .achievements {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-top: 12px;
-    }
-
-    .achievement {
-      padding: 26px;
-    }
-
-    .achievement .number {
-      display: block;
-      font-size: 34px;
-      line-height: 1;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 10px;
-    }
-
-    .achievement p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 16px;
+      gap: 24px;
     }
 
     .timeline {
@@ -308,47 +197,41 @@
       gap: 24px;
     }
 
-    .job {
-      padding: 30px;
+    .job h3 {
+      margin: 0;
+      font-size: 24px;
+      color: #111827;
+    }
+
+    .job-company {
+      margin-top: 6px;
+      color: #2563eb;
+      font-weight: 700;
     }
 
     .job-top {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
       gap: 20px;
       flex-wrap: wrap;
-      align-items: flex-start;
-      margin-bottom: 16px;
-    }
-
-    .job h3 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    .job-company {
-      color: var(--accent);
-      font-weight: 700;
-      margin-top: 4px;
-      font-size: 16px;
+      margin-bottom: 14px;
     }
 
     .job-date {
-      color: var(--muted);
+      color: #6b7280;
       font-size: 15px;
       font-weight: 700;
       white-space: nowrap;
     }
 
-    .job ul,
-    .list {
+    .job ul {
       margin: 0;
       padding-left: 20px;
-      color: var(--muted);
+      color: #4b5563;
     }
 
-    .job li + li,
-    .list li + li {
+    .job li + li {
       margin-top: 8px;
     }
 
@@ -358,13 +241,10 @@
       gap: 24px;
     }
 
-    .skill-card {
-      padding: 28px;
-    }
-
-    .skill-card h3 {
-      margin: 0 0 16px;
-      font-size: 22px;
+    .skills-grid h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 21px;
     }
 
     .tags {
@@ -374,174 +254,117 @@
     }
 
     .tag {
-      padding: 10px 14px;
-      border-radius: 999px;
       background: #eff6ff;
       color: #1d4ed8;
+      padding: 9px 14px;
+      border-radius: 999px;
       font-size: 14px;
       font-weight: 700;
     }
 
-    .soft-grid,
-    .cert-grid,
-    .interest-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-top: 24px;
-    }
-
-    .mini-card {
-      padding: 24px;
-    }
-
-    .mini-card h3 {
-      margin: 0 0 14px;
-      font-size: 20px;
-    }
-
-    .mini-card ul {
+    .list {
       margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
+      padding-left: 20px;
+      color: #4b5563;
     }
 
-    .languages {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 16px;
-    }
-
-    .lang-pill {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: #eff6ff;
-      color: #1d4ed8;
-      font-weight: 700;
-      font-size: 14px;
+    .list li + li {
+      margin-top: 8px;
     }
 
     .contact-box {
-      background: linear-gradient(135deg, var(--bg-2) 0%, var(--bg) 100%);
-      color: var(--white);
-      padding: 40px;
-      border-radius: 28px;
-      box-shadow: 0 22px 54px rgba(15, 23, 42, 0.22);
+      background: #111827;
+      color: #fff;
+      border-radius: 20px;
+      padding: 38px;
     }
 
     .contact-box h2 {
-      margin: 0 0 16px;
-      font-size: 34px;
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 32px;
     }
 
     .contact-box p {
-      margin: 0;
-      color: rgba(255,255,255,0.84);
-      font-size: 18px;
-      max-width: 760px;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 17px;
+      margin-bottom: 24px;
     }
 
     .contact-links {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-top: 24px;
     }
 
     .contact-links a {
-      padding: 14px 18px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 10px;
       font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .contact-links a:hover {
-      background: rgba(255,255,255,0.14);
-    }
-
-    .disclaimer {
-      margin-top: 24px;
-      color: rgba(255,255,255,0.72);
-      font-size: 13px;
+      background: rgba(255, 255, 255, 0.14);
     }
 
     footer {
-      padding: 32px 0 50px;
       text-align: center;
-      color: var(--muted);
-      font-size: 15px;
+      padding: 30px 20px 50px;
+      font-size: 14px;
+      color: #6b7280;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 960px) {
       .hero-grid,
-      .about-grid,
-      .edu-grid,
-      .contact-grid,
-      .achievements,
-      .skills-grid,
-      .soft-grid,
-      .cert-grid,
-      .interest-grid {
+      .two-col,
+      .skills-grid {
         grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 760px) {
-      .nav-inner {
+      .navbar .container {
         flex-direction: column;
         justify-content: center;
         padding: 14px 0;
       }
 
-      .section {
-        padding: 72px 0;
-      }
-
       .hero {
-        padding: 92px 0 74px;
+        padding: 80px 0 65px;
       }
 
       .section-title {
-        font-size: 30px;
+        font-size: 28px;
       }
 
-      .hero-role {
-        font-size: 22px;
+      .hero h2 {
+        font-size: 20px;
       }
 
       .hero p,
-      .section-lead,
-      .about-card p,
-      .edu-card p,
+      .section-subtitle,
       .contact-box p {
         font-size: 16px;
       }
 
-      .hero-card,
-      .about-card,
-      .achievement,
-      .job,
-      .skill-card,
-      .mini-card,
-      .edu-card,
+      .card,
       .contact-box,
-      .contact-card {
-        padding: 24px;
+      .hero-card {
+        padding: 22px;
       }
     }
   </style>
 </head>
 <body>
 
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="#start" class="brand">MK</a>
+  <nav class="navbar">
+    <div class="container">
+      <a href="#start" class="logo">MK</a>
       <div class="nav-links">
         <a href="#o-mnie">O mnie</a>
-        <a href="#osiagniecia">Osiągnięcia</a>
         <a href="#doswiadczenie">Doświadczenie</a>
         <a href="#umiejetnosci">Umiejętności</a>
         <a href="#wyksztalcenie">Wykształcenie</a>
@@ -554,495 +377,25 @@
   <header class="hero" id="start">
     <div class="container hero-grid">
       <div>
-        <div class="hero-badge">Digital Marketing Ekspert / CV Online</div>
         <h1>Michał Karakandas</h1>
-        <div class="hero-role">Performance Marketing Manager</div>
+        <h2>Performance Marketing Manager</h2>
         <p>
-          Jestem doświadczonym marketingowcem. W pracy konsultanta pomogłem ponad tysiąc
-          dwustu firmom oraz instytucjom, a w roli freelancera współpracowałem w ponad
-          pięćdziesięciu projektach. Moje podejście oparte na zasadzie T-shape pozwala mi
-          łączyć wiedzę z obszaru digital z szerokim zrozumieniem marketingu i biznesu,
-          dzięki czemu skutecznie współpracuję z zespołami o różnorodnych kompetencjach.
+          Jestem doświadczonym marketingowcem. W pracy konsultanta pomogłem ponad
+          1200 firmom oraz instytucjom, a jako freelancer współpracowałem w ponad
+          50 projektach. Łączę performance marketing, SEO, analitykę, branding
+          i szerokie spojrzenie na rozwój biznesu.
         </p>
 
-        <div class="hero-actions">
-          <a href="#kontakt" class="btn btn-primary">Skontaktuj się</a>
-          <a href="#doswiadczenie" class="btn btn-secondary">Zobacz doświadczenie</a>
-        </div>
-
-        <div class="hero-meta">
-          <span class="meta-pill">Google Ads</span>
-          <span class="meta-pill">Meta Ads</span>
-          <span class="meta-pill">TikTok Ads</span>
-          <span class="meta-pill">SEO / Local SEO</span>
-          <span class="meta-pill">Branding</span>
-          <span class="meta-pill">Data Driven</span>
+        <div class="hero-buttons">
+          <a href="#kontakt" class="btn btn-primary">Kontakt</a>
+          <a href="#doswiadczenie" class="btn btn-secondary">Moje doświadczenie</a>
         </div>
       </div>
 
       <div class="hero-card">
-        <h3>Profil zawodowy</h3>
-        <div class="hero-list">
-          <div class="hero-item">
-            <strong>Performance marketing</strong>
-            <span>Google Ads, Meta Ads, TikTok Ads, X Ads, Microsoft Advertising, kampanie SMS i e-mail marketing.</span>
-          </div>
-          <div class="hero-item">
-            <strong>SEO i widoczność</strong>
-            <span>SEO, lokalne SEO, publishing, pozycjonowanie stron i wizytówek Google.</span>
-          </div>
-          <div class="hero-item">
-            <strong>Analityka i rozwój marki</strong>
-            <span>Raportowanie, data analysis, branding, wizerunek marki i rozwój obecności firmy w digitalu.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="section" id="o-mnie">
-    <div class="container">
-      <h2 class="section-title">O mnie</h2>
-      <p class="section-lead">
-        Cechuje mnie przyjazne i pomocne usposobienie, a atmosfera współpracy jest dla mnie
-        bardzo istotna. Moją ambicją zawodową jest rozwój osobisty oraz skalowanie moich
-        umiejętności w organizacji. Lubię rozwiązania out of the box, lecz jestem data driven.
-        Pasjonuje mnie branding i wiem, dlaczego jabłko jest nadgryzione.
-      </p>
-
-      <div class="about-grid">
-        <div class="card about-card">
-          <h3>Jak pracuję</h3>
-          <p>
-            Łączę podejście strategiczne z działaniami operacyjnymi. Dobrze odnajduję się
-            zarówno w planowaniu kampanii, jak i w ich codziennej optymalizacji, analizie danych,
-            raportowaniu oraz rozwijaniu działań marketingowych w wielu kanałach jednocześnie.
-          </p>
-        </div>
-
-        <div class="card about-card">
-          <h3>Co wnoszę do zespołu</h3>
-          <p>
-            Szerokie spojrzenie na marketing, wysokie poczucie estetyki, doświadczenie konsultingowe,
-            umiejętność pracy z klientami i partnerami, a także sprawne łączenie performance,
-            SEO, analityki, komunikacji marki i działań rozwojowych.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="osiagniecia">
-    <div class="container">
-      <h2 class="section-title">Wybrane osiągnięcia</h2>
-      <p class="section-lead">
-        Najważniejsze wyniki i efekty działań wymienione w CV.
-      </p>
-
-      <div class="achievements">
-        <div class="card achievement">
-          <span class="number">1971%</span>
-          <p>Wzrost widoczności firmy na mapach Google.</p>
-        </div>
-
-        <div class="card achievement">
-          <span class="number">1,7 zł</span>
-          <p>Kampanie Performance Max z kosztem konwersji w okolicach 1,7 zł.</p>
-        </div>
-
-        <div class="card achievement">
-          <span class="number">116%</span>
-          <p>Wzrost pozycji strony w wyszukiwarce.</p>
-        </div>
-
-        <div class="card achievement">
-          <span class="number">91%</span>
-          <p>Obniżenie kosztów pozyskania leada z Meta.</p>
-        </div>
-
-        <div class="card achievement">
-          <span class="number">57%</span>
-          <p>Obniżenie kosztu kliknięcia kampanii SEA przy równoczesnym zwiększeniu konwersji o 39%.</p>
-        </div>
-
-        <div class="card achievement">
-          <span class="number">1870%</span>
-          <p>Wzrost ruchu na stronie w okresie 12 miesięcy.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="doswiadczenie">
-    <div class="container">
-      <h2 class="section-title">Doświadczenie zawodowe</h2>
-      <p class="section-lead">
-        Doświadczenie w marketingu cyfrowym, konsultingu, performance, SEO, automatyzacji i rozwoju marek.
-      </p>
-
-      <div class="timeline">
-        <article class="card job">
-          <div class="job-top">
-            <div>
-              <h3>Performance Marketing Manager</h3>
-              <div class="job-company">Pixel Arcadium sp. z o.o. (Pixel XL)</div>
-            </div>
-            <div class="job-date">luty 2025 - obecnie</div>
-          </div>
-          <ul>
-            <li>Prowadzenie kampanii performance - PPC w wielu kanałach reklamowych.</li>
-            <li>Obsługa i rozwój kampanii Google Ads, Meta Ads, TikTok Ads, X Ads oraz Microsoft Advertising.</li>
-            <li>Planowanie i realizacja kampanii SMS.</li>
-            <li>Prowadzenie działań SEO i lokalnego SEO.</li>
-            <li>Wsparcie wizerunku i rozwoju marki.</li>
-            <li>Bieżąca optymalizacja działań marketingowych oraz rozwój obecności firmy w digitalu.</li>
-          </ul>
-        </article>
-
-        <article class="card job">
-          <div class="job-top">
-            <div>
-              <h3>Digital Marketing Manager</h3>
-              <div class="job-company">TabelaOfert.pl sp. z o.o.</div>
-            </div>
-            <div class="job-date">czerwiec 2024 - luty 2025</div>
-          </div>
-          <ul>
-            <li>Kampanie Google Ads i Meta Ads.</li>
-            <li>Kampanie SMS oraz e-mail marketing.</li>
-            <li>SEO i publishing.</li>
-            <li>Data analysis i raportowanie.</li>
-            <li>Zarządzanie zespołem.</li>
-          </ul>
-        </article>
-
-        <article class="card job">
-          <div class="job-top">
-            <div>
-              <h3>Freelance / własna działalność gospodarcza</h3>
-              <div class="job-company">dla: MarketerHub, I’m Brand Institute, Trafero, Greenfields, Integrity Studio, Salony Optyczne Online, WSN Nieruchomości</div>
-            </div>
-            <div class="job-date">2016 - obecnie</div>
-          </div>
-          <ul>
-            <li>Kampanie Google Ads, Meta Ads, Twitter Ads / X Ads, Microsoft Ads.</li>
-            <li>Lokalne SEO.</li>
-            <li>Audyty PPC i SEO.</li>
-          </ul>
-        </article>
-
-        <article class="card job">
-          <div class="job-top">
-            <div>
-              <h3>Ekspert marketingu internetowego</h3>
-              <div class="job-company">Audiofon Matyja sp. k.</div>
-            </div>
-            <div class="job-date">sierpień 2020 - maj 2024</div>
-          </div>
-          <ul>
-            <li>Prowadzenie kampanii PPC.</li>
-            <li>Pozycjonowanie strony w wyszukiwarce oraz pozycjonowanie wizytówek Google.</li>
-            <li>Administracja strony WWW i publishing.</li>
-            <li>Wsparcie community managera w prowadzeniu profili społecznościowych.</li>
-            <li>Opieka nad newsletterem oraz marketing automation.</li>
-            <li>Kontakt z agencjami zewnętrznymi, zarządzanie oraz ewaluacja wyników.</li>
-            <li>Geomarketing i data analysis.</li>
-          </ul>
-        </article>
-
-        <article class="card job">
-          <div class="job-top">
-            <div>
-              <h3>Konsultant ds. marketingu internetowego</h3>
-              <div class="job-company">Mediacap sp. z o.o.</div>
-            </div>
-            <div class="job-date">marzec 2017 - marzec 2022</div>
-          </div>
-          <ul>
-            <li>Praca przy projektach Google Internetowe Rewolucje, Google dla Edukacji oraz Firmy Jutra - program Google i PFR.</li>
-            <li>Ewangelizacja, konsulting i doradztwo w dziedzinie marketingu internetowego i obecności firmy w internecie.</li>
-            <li>Wsparcie w obszarach SEM (SEO/SEA), kampanii PPC, kampanii e-mail i video.</li>
-            <li>Doradztwo w zakresie obecności w social mediach.</li>
-            <li>Analiza ruchu na stronach WWW.</li>
-            <li>Wsparcie rozwoju na rynkach zagranicznych.</li>
-            <li>Doradztwo w obszarze ePR-u, standardów UX i UI oraz analizy jakości stron internetowych.</li>
-            <li>Doradztwo w zakresie bezpieczeństwa użytkowników.</li>
-            <li>Wykorzystanie narzędzi marketingu internetowego i narzędzi Google.</li>
-            <li>Tworzenie digital planów i audytów.</li>
-            <li>Działania ambasadorskie: pozyskanie i kontakt z partnerami projektu, pozyskiwanie leadów, prowadzenie warsztatów, szkoleń i prezentacji.</li>
-            <li>Google Trusted Verifier - weryfikacja obecności firm na mapach.</li>
-          </ul>
-        </article>
-
-        <article class="card job">
-          <div class="job-top">
-            <div>
-              <h3>Poprzednie doświadczenie</h3>
-              <div class="job-company">różne organizacje i projekty</div>
-            </div>
-          </div>
-          <ul>
-            <li>Specjalista ds. marketingu - Fundacja Centaurs.</li>
-            <li>Specjalista ds. marketingu automatycznego / Redaktor - Q4B / TelematicWorld.</li>
-            <li>Asystent kierownika produkcji - Tako Media.</li>
-            <li>Asystent ds. kontroli jakości procesów sprzedażowych - C.C.I.G.</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="umiejetnosci">
-    <div class="container">
-      <h2 class="section-title">Umiejętności i narzędzia</h2>
-      <p class="section-lead">
-        Obszary, technologie i platformy, z których korzystam w codziennej pracy.
-      </p>
-
-      <div class="skills-grid">
-        <div class="card skill-card">
-          <h3>Performance / Ads</h3>
-          <div class="tags">
-            <span class="tag">Google Ads</span>
-            <span class="tag">Meta Ads</span>
-            <span class="tag">TikTok Ads</span>
-            <span class="tag">X Ads</span>
-            <span class="tag">Microsoft Ads</span>
-            <span class="tag">SEA</span>
-            <span class="tag">SMS API</span>
-            <span class="tag">Freshmail</span>
-            <span class="tag">GetResponse</span>
-            <span class="tag">Salesmanago</span>
-          </div>
-        </div>
-
-        <div class="card skill-card">
-          <h3>SEO / analityka / research</h3>
-          <div class="tags">
-            <span class="tag">SEO</span>
-            <span class="tag">Local SEO</span>
-            <span class="tag">Google Search Console</span>
-            <span class="tag">Google Analytics</span>
-            <span class="tag">Tag Manager</span>
-            <span class="tag">Looker Studio</span>
-            <span class="tag">Piwik Pro</span>
-            <span class="tag">Screaming Frog</span>
-            <span class="tag">SimilarWeb</span>
-            <span class="tag">Ahrefs</span>
-            <span class="tag">Majestic</span>
-            <span class="tag">Semstorm</span>
-            <span class="tag">Senuto</span>
-            <span class="tag">Ubersuggest</span>
-            <span class="tag">Answer The Public</span>
-            <span class="tag">Hotjar</span>
-            <span class="tag">MS Clarity</span>
-          </div>
-        </div>
-
-        <div class="card skill-card">
-          <h3>Marketing / content / brand</h3>
-          <div class="tags">
-            <span class="tag">Branding</span>
-            <span class="tag">Publishing</span>
-            <span class="tag">Marketing automation</span>
-            <span class="tag">Community support</span>
-            <span class="tag">Geomarketing</span>
-            <span class="tag">Brand24</span>
-            <span class="tag">SentiOne</span>
-            <span class="tag">Rating Captain</span>
-            <span class="tag">Pin Me To</span>
-            <span class="tag">Meta Business Manager</span>
-            <span class="tag">SoTrender</span>
-          </div>
-        </div>
-
-        <div class="card skill-card">
-          <h3>CMS / WWW / projektowanie</h3>
-          <div class="tags">
-            <span class="tag">WordPress</span>
-            <span class="tag">WebWave</span>
-            <span class="tag">Wix</span>
-            <span class="tag">Adobe CC</span>
-            <span class="tag">Canva</span>
-          </div>
-        </div>
-
-        <div class="card skill-card">
-          <h3>Produktywność / AI / CRM</h3>
-          <div class="tags">
-            <span class="tag">Office 360</span>
-            <span class="tag">Google Workspace</span>
-            <span class="tag">Zoho CRM</span>
-            <span class="tag">Zoho Mail</span>
-            <span class="tag">ChatGPT</span>
-            <span class="tag">Google Gemini</span>
-            <span class="tag">DALL-E</span>
-          </div>
-        </div>
-
-        <div class="card skill-card">
-          <h3>Google ecosystem</h3>
-          <div class="tags">
-            <span class="tag">Google Ads</span>
-            <span class="tag">Analytics</span>
-            <span class="tag">Search Console</span>
-            <span class="tag">Profil Firmy Google</span>
-            <span class="tag">Tag Manager</span>
-            <span class="tag">Market Finder</span>
-            <span class="tag">Google Cloud</span>
-            <span class="tag">Looker Studio</span>
-            <span class="tag">Google Workshop</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="languages">
-        <span class="lang-pill">Język angielski</span>
-        <span class="lang-pill">Język śląski</span>
-      </div>
-
-      <div class="soft-grid">
-        <div class="card mini-card">
-          <h3>Umiejętności miękkie</h3>
-          <ul>
-            <li>kreatywność</li>
-            <li>wysokie poczucie estetyki</li>
-            <li>rozwinięte umiejętności interpersonalne</li>
-            <li>umiejętność pracy w grupie</li>
-            <li>zarządzanie zasobami ludzkimi</li>
-          </ul>
-        </div>
-
-        <div class="card mini-card">
-          <h3>Organizacja i działanie</h3>
-          <ul>
-            <li>dobra organizacja pracy</li>
-            <li>dynamizm działania</li>
-            <li>data driven mindset</li>
-            <li>przyjazne i pomocne usposobienie</li>
-            <li>poczucie humoru</li>
-          </ul>
-        </div>
-
-        <div class="card mini-card">
-          <h3>Zainteresowania</h3>
-          <ul>
-            <li>marketing</li>
-            <li>PR</li>
-            <li>branding</li>
-            <li>social media</li>
-            <li>nowe technologie</li>
-            <li>reklama lat 90-tych</li>
-            <li>memy internetowe</li>
-            <li>film / kino / popkultura</li>
-            <li>nurkowanie</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="wyksztalcenie">
-    <div class="container">
-      <h2 class="section-title">Wykształcenie</h2>
-      <p class="section-lead">
-        Wykształcenie zdobyte na Uniwersytecie Wrocławskim.
-      </p>
-
-      <div class="edu-grid">
-        <div class="card edu-card">
-          <h3>Komunikacja wizerunkowa</h3>
-          <p>II stopień - studia stacjonarne, 2014-2016<br>Uniwersytet Wrocławski</p>
-        </div>
-
-        <div class="card edu-card">
-          <h3>Komunikacja wizerunkowa</h3>
-          <p>I stopień - studia stacjonarne, 2013-2016<br>Uniwersytet Wrocławski</p>
-        </div>
-
-        <div class="card edu-card">
-          <h3>Politologia</h3>
-          <p>I stopień - studia stacjonarne, 2010-2013<br>Uniwersytet Wrocławski</p>
-        </div>
-
-        <div class="card edu-card">
-          <h3>Podejście zawodowe</h3>
-          <p>
-            Połączenie komunikacji, marketingu, estetyki i szerokiego rozumienia biznesu,
-            rozwijane następnie w praktyce konsultingowej, freelancerskiej i in-house.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="certyfikaty">
-    <div class="container">
-      <h2 class="section-title">Certyfikaty i szkolenia</h2>
-      <p class="section-lead">
-        Certyfikaty i programy wymienione w CV.
-      </p>
-
-      <div class="cert-grid">
-        <div class="card mini-card">
-          <h3>Google</h3>
-          <ul>
-            <li>Google Internetowe Rewolucje</li>
-            <li>Google Ads Search</li>
-            <li>Google Ads Display</li>
-            <li>Google Ads Mobile</li>
-            <li>Google Ads Video</li>
-            <li>Google Shopping Ads</li>
-          </ul>
-        </div>
-
-        <div class="card mini-card">
-          <h3>Rozwój i innowacje</h3>
-          <ul>
-            <li>Google Creative Skills for Innovation</li>
-            <li>Google Workshop</li>
-            <li>Brand24 - Monitorowanie internetu</li>
-          </ul>
-        </div>
-
-        <div class="card mini-card">
-          <h3>Dodatkowe</h3>
-          <ul>
-            <li>SMS API</li>
-            <li>Praktyczne wykorzystanie narzędzi marketingu internetowego</li>
-            <li>Praktyczne wykorzystanie narzędzi Google</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="kontakt">
-    <div class="container">
-      <div class="contact-box">
-        <h2>Kontakt</h2>
-        <p>
-          Jestem otwarty na rozmowę o współpracy, projektach marketingowych,
-          działaniach performance, SEO, consultingu i rozwoju marki.
-        </p>
-
-        <div class="contact-links">
-          <a href="mailto:michal@karakandas.pl">michal@karakandas.pl</a>
-          <a href="tel:+48695611182">+48 695 611 182</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-
-        <div class="disclaimer">
-          Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do
-          realizacji procesu rekrutacji zgodnie z obowiązującymi przepisami prawa.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Michał Karakandas - CV online
-  </footer>
-
-</body>
-</html>
+        <h3>Specjalizacje</h3>
+        <ul>
+          <li>Google Ads, Meta Ads, TikTok Ads, X Ads, Microsoft Advertising</li>
+          <li>SEO, lokalne SEO, publishing i widoczność marki</li>
+          <li>Kampanie SMS, e-mail marketing i marketing automation</li>
+          <li>Data analysis, raportowanie, branding i rozw
