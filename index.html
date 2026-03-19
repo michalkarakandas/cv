@@ -1,14 +1,711 @@
 <!DOCTYPE html>
-
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Moje CV</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michał Karakandas | Performance Marketing Manager</title>
+  <meta
+    name="description"
+    content="Michał Karakandas - Performance Marketing Manager. Google Ads, Meta Ads, TikTok Ads, SEO, analityka, rozwój marki i kampanie performance."
+  />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-light: #f8fafc;
+      --white: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --card: #ffffff;
+      --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      --radius: 20px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg-light);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-title {
+      font-size: 34px;
+      margin: 0 0 14px;
+      color: var(--text);
+      text-align: center;
+    }
+
+    .section-lead {
+      max-width: 760px;
+      margin: 0 auto 48px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: var(--white);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: var(--white);
+      padding: 110px 0 90px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #dbeafe;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 1.05;
+      margin: 0 0 14px;
+    }
+
+    .hero-role {
+      font-size: 24px;
+      color: #bfdbfe;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.86);
+      margin: 0 0 30px;
+      max-width: 720px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.2s ease;
+      border: 2px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.28);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .hero-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 15px;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-card h3 {
+      margin: 0 0 18px;
+      font-size: 22px;
+    }
+
+    .hero-points {
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero-point {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 16px 18px;
+    }
+
+    .hero-point strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 15px;
+      color: #dbeafe;
+    }
+
+    .hero-point span {
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 15px;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 24px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* EXPERIENCE */
+    .timeline {
+      display: grid;
+      gap: 24px;
+    }
+
+    .job {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+    }
+
+    .job-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .job h3 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .job-company {
+      color: var(--accent);
+      font-weight: 700;
+      margin-top: 4px;
+      font-size: 16px;
+    }
+
+    .job-date {
+      color: var(--muted);
+      font-weight: 700;
+      white-space: nowrap;
+      font-size: 15px;
+    }
+
+    .job ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .job li + li {
+      margin-top: 10px;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .skill-box {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+    }
+
+    .skill-box h3 {
+      margin: 0 0 16px;
+      font-size: 22px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* EDUCATION */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .edu-item {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+    }
+
+    .edu-item h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+
+    .edu-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: var(--white);
+      border-radius: 28px;
+      padding: 40px;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
+    }
+
+    .contact-box h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 34px;
+      text-align: left;
+    }
+
+    .contact-box p {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 18px;
+      max-width: 760px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .contact-links a {
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--white);
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .contact-links a:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    footer {
+      padding: 32px 0 50px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .skills-grid,
+      .edu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-inner {
+        flex-direction: column;
+        justify-content: center;
+        padding: 14px 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section {
+        padding: 72px 0;
+      }
+
+      .hero {
+        padding: 90px 0 70px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .hero-role {
+        font-size: 20px;
+      }
+
+      .hero p,
+      .section-lead,
+      .card p,
+      .contact-box p {
+        font-size: 16px;
+      }
+
+      .card,
+      .job,
+      .skill-box,
+      .edu-item,
+      .contact-box,
+      .hero-card {
+        padding: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Michal Karakandas</h1>
-  <p>Moje CV online</p>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#start" class="logo">MK</a>
+      <div class="nav-links">
+        <a href="#o-mnie">O mnie</a>
+        <a href="#doswiadczenie">Doświadczenie</a>
+        <a href="#umiejetnosci">Umiejętności</a>
+        <a href="#wyksztalcenie">Wykształcenie</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="start">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-tag">CV Online / Resume</div>
+        <h1>Michał Karakandas</h1>
+        <div class="hero-role">Performance Marketing Manager</div>
+        <p>
+          Jestem specjalistą digital i performance marketingu z doświadczeniem w prowadzeniu
+          kampanii PPC, działaniach SEO, analityce oraz rozwoju marek. Łączę podejście
+          strategiczne z codzienną pracą operacyjną, skupiając się na skutecznych kampaniach,
+          jakości ruchu, widoczności marki i realnym wsparciu celów biznesowych.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn btn-primary">Skontaktuj się</a>
+          <a href="#doswiadczenie" class="btn btn-secondary">Zobacz doświadczenie</a>
+        </div>
+
+        <div class="hero-contact">
+          <span>Performance Marketing</span>
+          <span>Google Ads / Meta Ads</span>
+          <span>SEO / Local SEO</span>
+          <span>Brand Development</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Zakres specjalizacji</h3>
+        <div class="hero-points">
+          <div class="hero-point">
+            <strong>Kampanie performance</strong>
+            <span>Google Ads, Meta Ads, TikTok Ads, X Ads, Microsoft Advertising, SMS</span>
+          </div>
+          <div class="hero-point">
+            <strong>Widoczność i rozwój marki</strong>
+            <span>SEO, lokalne SEO, działania wizerunkowe, budowanie obecności marki online</span>
+          </div>
+          <div class="hero-point">
+            <strong>Marketing oparty o dane</strong>
+            <span>Optymalizacja działań, analiza kampanii, porządkowanie lejka i kanałów pozyskania</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="o-mnie">
+    <div class="container">
+      <h2 class="section-title">O mnie</h2>
+      <p class="section-lead">
+        Pracuję w obszarze marketingu internetowego, łącząc performance, analitykę,
+        SEO i rozwój marki. Prowadzę działania zarówno na etapie planowania strategii,
+        jak i bieżącej optymalizacji kampanii w wielu kanałach reklamowych.
+      </p>
+
+      <div class="about-grid">
+        <div class="card">
+          <h3>Jak pracuję</h3>
+          <p>
+            Stawiam na przejrzystość działań, porządek w kanałach marketingowych i konsekwentne
+            budowanie skuteczności kampanii. Ważne są dla mnie zarówno wyniki sprzedażowe
+            i leadowe, jak i spójność komunikacji marki.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Na czym się koncentruję</h3>
+          <p>
+            Tworzę i rozwijam kampanie PPC, wspieram widoczność organiczną przez SEO i lokalne SEO,
+            prowadzę działania brandingowe oraz rozwijam obecność firm w środowisku digitalowym
+            w sposób dopasowany do ich celów biznesowych.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="doswiadczenie">
+    <div class="container">
+      <h2 class="section-title">Doświadczenie</h2>
+      <p class="section-lead">
+        Doświadczenie w obszarze digital marketingu, performance i rozwoju marek
+        zdobywane po stronie firm, projektów i codziennej pracy operacyjnej.
+      </p>
+
+      <div class="timeline">
+        <article class="job">
+          <div class="job-top">
+            <div>
+              <h3>Performance Marketing Manager</h3>
+              <div class="job-company">Pixel Arcadium sp. z o.o. (Pixel XL)</div>
+            </div>
+            <div class="job-date">luty 2025 - obecnie</div>
+          </div>
+          <ul>
+            <li>Prowadzenie kampanii performance w kanałach PPC z naciskiem na efektywność i spójność działań marketingowych.</li>
+            <li>Obsługa i rozwój kampanii Google Ads, Meta Ads, TikTok Ads, X Ads oraz Microsoft Advertising.</li>
+            <li>Planowanie i realizacja kampanii SMS jako dodatkowego kanału komunikacji i wsparcia sprzedaży.</li>
+            <li>Prowadzenie działań SEO i lokalnego SEO wspierających widoczność marek i projektów w wyszukiwarce.</li>
+            <li>Wsparcie obszaru wizerunku marki, rozwoju brandu i obecności firmy w kanałach digitalowych.</li>
+            <li>Bieżąca optymalizacja kampanii, analiza działań i dopasowanie komunikacji do potrzeb biznesowych.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-top">
+            <div>
+              <h3>Digital Marketing Manager</h3>
+              <div class="job-company">TabelaOfert.pl sp. z o.o.</div>
+            </div>
+            <div class="job-date">czerwiec 2024 - luty 2025</div>
+          </div>
+          <ul>
+            <li>Prowadzenie działań digital marketingowych wspierających cele biznesowe i widoczność marki.</li>
+            <li>Koordynacja kampanii reklamowych i optymalizacja działań promocyjnych w kanałach online.</li>
+            <li>Współpraca przy rozwoju obecności marki oraz porządkowaniu komunikacji marketingowej.</li>
+            <li>Wykorzystanie analityki i danych do bieżącej oceny skuteczności działań marketingowych.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="umiejetnosci">
+    <div class="container">
+      <h2 class="section-title">Umiejętności</h2>
+      <p class="section-lead">
+        Narzędzia i obszary, w których pracuję na co dzień.
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h3>Performance / PPC</h3>
+          <div class="tags">
+            <span class="tag">Google Ads</span>
+            <span class="tag">Meta Ads</span>
+            <span class="tag">TikTok Ads</span>
+            <span class="tag">X Ads</span>
+            <span class="tag">Microsoft Advertising</span>
+            <span class="tag">SMS Marketing</span>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <h3>SEO i widoczność</h3>
+          <div class="tags">
+            <span class="tag">SEO</span>
+            <span class="tag">Local SEO</span>
+            <span class="tag">Widoczność marki</span>
+            <span class="tag">Content support</span>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <h3>Strategia i rozwój</h3>
+          <div class="tags">
+            <span class="tag">Brand development</span>
+            <span class="tag">Wizerunek marki</span>
+            <span class="tag">Analityka</span>
+            <span class="tag">Optymalizacja</span>
+            <span class="tag">Digital strategy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="wyksztalcenie">
+    <div class="container">
+      <h2 class="section-title">Wykształcenie i rozwój</h2>
+      <p class="section-lead">
+        Tu możesz wpisać wykształcenie, kursy, certyfikaty albo szkolenia z CV.
+      </p>
+
+      <div class="edu-grid">
+        <div class="edu-item">
+          <h3>Wykształcenie</h3>
+          <p>
+            Tutaj wklej dane z CV: uczelnia, kierunek, lata.
+          </p>
+        </div>
+
+        <div class="edu-item">
+          <h3>Certyfikaty / kursy</h3>
+          <p>
+            Tutaj wklej certyfikaty i szkolenia z CV, np. Google Ads, analityka, marketing digital.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="kontakt">
+    <div class="container">
+      <div class="contact-box">
+        <h2>Kontakt</h2>
+        <p>
+          Jestem otwarty na rozmowę o współpracy, projektach marketingowych,
+          rozwoju kampanii performance oraz działaniach wspierających wzrost marki.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:twojemail@example.com">twojemail@example.com</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="tel:+48000000000">+48 000 000 000</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Michał Karakandas. All rights reserved.
+  </footer>
 
 </body>
 </html>
